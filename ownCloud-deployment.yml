@@ -19,6 +19,16 @@ spec:
       persistentVolumeClaim:
         claimName: owncloud-pvc
     spec:
+      initContainers:
+      - name: volume-dirs-init-cntr
+        image: busybox:1.35
+        command:
+        - "/bin/mkdir"
+        args:
+        - "-p"
+        - "/var/www/html/data"
+        - "/var/www/html/apps"
+        - "/var/www/html/config"
       containers:
         - name: owncloud
           image: owncloud
