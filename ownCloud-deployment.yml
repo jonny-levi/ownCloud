@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: owncloud
+  namespace: ownCloud
+  labels:
+    app: owncloud
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: owncloud
+  template:
+    metadata:
+      labels:
+        app: owncloud
+    volumes:
+    - name: owncloud-pv
+      persistentVolumeClaim:
+        claimName: owncloud-pvc
+    spec:
+      containers:
+        - name: owncloud
+          image: owncloud
+      volumeMounts:
+        - mountPath: "/var/www/html/data"
+          name: owncloud-pv
+          subPath: /data
+        - mountPath: "/var/www/html/apps"
+          name: owncloud-pv
+          subPath: /apps
+        - mountPath: "/var/www/html/config"
+          name: owncloud-pv
+          subPath: /config
