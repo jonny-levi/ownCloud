@@ -32,9 +32,9 @@ spec:
         - mountPath: "/var/www/html/data"
           name: owncloud-pv
         - mountPath: "/var/www/html/apps"
-          name: owncloud-pvc-ssd-1g
+          name: owncloud-pv-ssd-1g
         - mountPath: "/var/www/html/config"
-          name: owncloud-pvc-ssd-1g
+          name: owncloud-pv-ssd-1g
       volumes:
       - name: owncloud-pv
         persistentVolumeClaim:
