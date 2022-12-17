@@ -14,10 +14,10 @@ spec:
     metadata:
       labels:
         app: owncloud
-    volumes:
-    - name: owncloud-pv
-      persistentVolumeClaim:
-        claimName: owncloud-pvc
+      volumes:
+      - name: owncloud-pv
+        persistentVolumeClaim:
+          claimName: owncloud-pvc
     spec:
       initContainers:
       - name: volume-dirs-init-cntr
