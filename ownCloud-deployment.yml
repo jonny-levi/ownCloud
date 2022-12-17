@@ -31,13 +31,10 @@ spec:
         volumeMounts:
         - mountPath: "/var/www/html/data"
           name: owncloud-pv
-          subPath: /data
         - mountPath: "/var/www/html/apps"
           name: owncloud-pv
-          subPath: /apps
         - mountPath: "/var/www/html/config"
           name: owncloud-pv
-          subPath: /config
       volumes:
       - name: owncloud-pv
         persistentVolumeClaim:
