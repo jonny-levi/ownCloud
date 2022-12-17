@@ -13,3 +13,19 @@ spec:
     - ReadWriteMany
   hostPath:
     path: "/mnt/k8s"
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: owncloud-pv-ssd-1g
+  namespace: owncloud
+  labels:
+    app: ownCloud
+spec:
+  storageClassName: manual
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteMany
+  hostPath:
+    path: "/mnt/ssd_owncloud"

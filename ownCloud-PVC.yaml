@@ -10,3 +10,17 @@ spec:
   resources:
     requests:
       storage: 500Gi
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: owncloud-pvc-ssd-1g
+  namespace: owncloud
+spec:
+  storageClassName: manual
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 1Gi
+
