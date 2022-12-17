@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: owncloud
-  namespace: ownCloud
+  namespace: owncloud
   labels:
     app: owncloud
 spec:

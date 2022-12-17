@@ -2,7 +2,7 @@ apiVersion: v1
 kind: PersistentVolume
 metadata:
   name: owncloud-pv
-  namespace: ownCloud
+  namespace: owncloud
   labels:
     app: ownCloud
 spec:

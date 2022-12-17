@@ -2,7 +2,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: owncloud-pvc
-  namespace: ownCloud
+  namespace: owncloud
 spec:
   storageClassName: manual
   accessModes:

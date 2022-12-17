@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: owncloud
-  namespace: ownCloud
+  namespace: owncloud
 spec:
   type: NodePort
   selector:
